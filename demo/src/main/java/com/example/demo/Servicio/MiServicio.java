@@ -19,7 +19,7 @@ public class MiServicio {
     private EntityManager entityManager;
     @Autowired
     private MiEntidadRepository repository;
-
+//
     public Empleado insertarPersona(String nombre, String apellido, Date fecha, Integer idGenero, Integer idJob) {
         StoredProcedureQuery storedProcedureQuery = entityManager
                 .createStoredProcedureQuery("addEmploye")
@@ -63,7 +63,10 @@ public class MiServicio {
             return empleado;
         }
 
+
     }
+
+
 
 
 }
