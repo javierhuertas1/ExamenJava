@@ -1,4 +1,4 @@
-package com.example.demo.Entidad;
+package com.example.demo.entidad;
 
 import java.sql.Date;
 
@@ -6,26 +6,29 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class employees {
+@Table(name = "employees")
+public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
-    private String JOB_ID;
+    private Integer JOB_ID;
     private String NAME;
     private String LAST_NAME;
     private Date BIRTHDATE;
+    private Integer GENDER_ID;
     public Integer getID() {
         return ID;
     }
     public void setID(Integer iD) {
         ID = iD;
     }
-    public String getJOB_ID() {
+    public Integer getJOB_ID() {
         return JOB_ID;
     }
-    public void setJOB_ID(String jOB_ID) {
+    public void setJOB_ID(Integer jOB_ID) {
         JOB_ID = jOB_ID;
     }
     public String getNAME() {
@@ -46,8 +49,12 @@ public class employees {
     public void setBIRTHDATE(Date bIRTHDATE) {
         BIRTHDATE = bIRTHDATE;
     }
-    
-
+    public Integer getGENDER_ID() {
+        return GENDER_ID;
+    }
+    public void setGENDER_ID(Integer gENDER_ID) {
+        GENDER_ID = gENDER_ID;
+    }
 
     
 }
